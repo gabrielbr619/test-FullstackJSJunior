@@ -19,9 +19,7 @@ Então utilize a ferramenta para testes de API da sua preferência.
 <br/>
 
 ## *Routes*
-
-![image](https://user-images.githubusercontent.com/79314576/120045699-fb093500-bfe6-11eb-9320-0ef9df0d37de.png)
-
+![image](https://user-images.githubusercontent.com/79314576/120070092-b40b5600-c05f-11eb-9956-f7bf41a7fdf7.png)
 <br/>
 
 HTTP | ROUTE | BODY | DESCRIÇÃO |
