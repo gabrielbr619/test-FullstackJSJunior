@@ -4,8 +4,6 @@ function fsWriteData(fileData) {
   fs.writeFileSync('UsersList.json', JSON.stringify(fileData), (error) => {
     if (error) {
       console.log({ Error: error });
-    } else {
-      console.log('Sucesso!');
     }
   });
 }
@@ -13,6 +11,9 @@ function fsWriteData(fileData) {
 module.exports = {
 
   find() {
+    if (!fs.existsSync('./UsersList.json')) {
+      return undefined;
+    }
     const fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
     return fileData;
   },
@@ -21,6 +22,11 @@ module.exports = {
     let fileData;
     if (fs.existsSync('./UsersList.json')) {
       fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
+      const userAlreadyExists = fileData.find((x) => x.email === user.email);
+
+      if (userAlreadyExists) {
+        return undefined;
+      }
 
       fileData.push(user);
       fsWriteData(fileData);
@@ -35,10 +41,10 @@ module.exports = {
   findById(id) {
     const fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
     const idOwner = fileData.find((user) => user.id === id);
-    if (idOwner) {
-      return idOwner;
+    if (!idOwner) {
+      return undefined;
     }
-    return undefined;
+    return idOwner;
   },
 
   update(id, email, senha) {

@@ -13,7 +13,7 @@ module.exports = {
       return res.status(400).send({ error: 'Usuário não foi encontrado!' });
     }
 
-    return res.status(200).send(user);
+    return res.status(200).send({ Usuário: user });
   },
 
   create(req, res) {
@@ -24,8 +24,12 @@ module.exports = {
       email,
       senha,
     };
+    const userNew = User.new(user);
+    if (userNew === undefined) {
+      return res.status(400).send({ Error: 'Usuário já existe' });
+    }
 
-    return res.status(201).send(User.new(user));
+    return res.status(201).send({ 'Usuário criado': user });
   },
 
   update(req, res) {
