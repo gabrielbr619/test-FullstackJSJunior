@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -9,101 +9,107 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
 
-
+    <link rel="shortcut icon" href="/image/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="/scss/main.css">
-    <title>Document</title>
+    <title>User Profile</title>
 </head>
 
 <body>
     <div class="container-detail-user">
         <div class="container-button-user">
-        <div class="flexbox-margin">
-            <div style="display: flex;flex-direction: column;align-items: flex-end;">
-                <div>
-            <h1>User</h1>
-            <div class="detail-underline-title"></div>
-            <div class="detail-card-user" id=<%=user.id %>>
-                <div class="color-block-user"></div>
-                <div class="detail-user-info">
-                    <div id="user-name">
-                        <div style="display: flex;align-items: center;">
-                            <h1>Nome</h1>
-                            <% if (user.name) { %>
-                                <h2>
-                                    <%= user.name %>
-                                </h2>
+            <div class="flexbox-margin">
+                <div style="display: flex;flex-direction: column;align-items: flex-end;">
+                    <div>
+                        <h1>User</h1>
+                        <div class="detail-underline-title"></div>
+                        <div class="detail-card-user" id=<%=user.id %>>
+                            <div class="color-block-user"></div>
+                            <div class="detail-user-info">
+                                <div id="user-name">
+                                    <div style="display: flex;align-items: center;">
+                                        <h1>Nome</h1>
+                                        <% if (user.name) { %>
+                                            <h2>
+                                                <%= user.name %>
+                                            </h2>
 
-                                <% } else { %>
-                                    <h2>Desconhecido</h2>
-                                    <%}%>
+                                            <% } else { %>
+                                                <h2>Desconhecido</h2>
+                                                <%}%>
+                                    </div>
+                                    <i class="fas fa-pencil fa-3x" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"></i>
+                                    <div></div>
+                                </div>
+                                <div id="user-email">
+                                    <h1>email</h1>
+                                    <h2>
+                                        <%= user.email %>
+                                    </h2>
+                                </div>
+                                <div id="user-password">
+                                    <h1>senha</h1>
+                                    <h2>
+                                        <%= user.senha %>
+                                    </h2>
+
+                                </div>
+                            </div>
                         </div>
-                        <i class="fas fa-pencil fa-3x" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                        <div></div>
                     </div>
-                    <div id="user-email">
-                        <h1>email</h1>
-                        <h2>
-                            <%= user.email %>
-                        </h2>
-                    </div>
-                    <div id="user-password">
-                        <h1>senha</h1>
-                        <h2>
-                            <%= user.senha %>
-                        </h2>
+                    <a href="/"><button>Voltar</button></a>
+                </div>
+            </div>
 
-                    </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atualizar User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form-modal">
+                        <div class="container-input">
+                            <i class="fas fa-user-circle fa-lg"> Nome do usuário</i>
+                            <input type="text" placeholder="seu nome" id="name-modal" value=<%=user.name%> >
+                        </div>
+
+                        <div class="container-input">
+                            <i class="fas fa-envelope fa-lg"> Email do usuário</i>
+                            <input type="text" placeholder="seu email" id="email-modal" value=<%=user.email%>>
+                        </div>
+                        <div class="container-input">
+                            <i class="fas fa-lock fa-lg"> Senha do usuário</i>
+                            <input type="text" placeholder="sua senha" id="password-modal" value=<%=user.senha%>>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="handleUpdate(this.id)" id=<%=user.id %>
+                        >Salvar Alterações</button>
                 </div>
             </div>
         </div>
-            <a href="/"><button>Voltar</button></a>
-        </div>
-        </div>
-
-        
     </div>
-    </div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Atualizar User</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        
-        <form class="form-modal">
-            <div class="container-input">
-                <i class="fas fa-user-circle fa-lg"> Nome do usuário</i>
-                <input type="text" placeholder="seu nome" id="name-modal" value=<%=user.name%> >
-            </div>
-
-            <div class="container-input">
-                <i class="fas fa-envelope fa-lg"> Email do usuário</i>
-                <input type="text" placeholder="seu email" id="email-modal" value=<%=user.email%>>
-            </div>
-            <div class="container-input">
-                <i class="fas fa-lock fa-lg"> Senha do usuário</i>
-                <input type="text" placeholder="sua senha" id="password-modal" value=<%=user.senha%>>
-            </div>
-            
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="handleUpdate(this.id)" id=<%= user.id %> >Salvar Alterações</button>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
 <script src="/scripts/fetchApi.js"></script>
+
 </html>
