@@ -4,7 +4,8 @@
 
 ## *O que é*
 
-Trata-se de um projeto Fullstack que permite a elaboração de um **CRUD** básico, decidi utilizar o padrão **MVC** pela simplicidade do projeto e o foco no Backend, sendo assim optei pelo o **EJS** como View, por creer que este lidaria bem com as necessidades do app, o backend é uma **API Restful** que utiliza Express, o banco de dados é o documento **JSON**, cuja criação era obrigatória. 
+Trata-se de um projeto Fullstack que permite a elaboração de um **CRUD** básico, o design foi idealizado no [Figma](https://www.figma.com/file/jTXW4TLNvRe0E0nxZWDkka/Contele-Challenge-FullStack?node-id=6%3A27) e então transcrito(com alterações) para código, decidi utilizar o padrão **MVC** pela simplicidade do projeto e o foco no Backend, sendo assim optei pelo o **EJS** como View, por creer que este lidaria bem com as necessidades do app, o backend é uma **API Restful** que utiliza Express, o banco de dados é o documento **JSON**, cuja criação era obrigatória.
+
 
 <br/>
 
