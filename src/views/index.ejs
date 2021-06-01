@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Contele</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/scss/main.css">
+</head>
+
+<body>
+    <div class="container-geral">
+        <div class="container-register">
+            <h1 class="register-title">Cadastrar User</h1>
+            <div class="underline-users-title"></div>
+            <form>
+                <div class="container-input">
+                    <i class="fas fa-user-circle fa-lg"></i>
+                    <input type="text" placeholder="seu nome" id="name">
+                </div>
+
+                <div class="container-input">
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <input type="text" placeholder="seu email" id="email">
+                </div>
+                <div class="container-input">
+                    <i class="fas fa-lock fa-lg"></i>
+                    <input type="text" placeholder="sua senha" id="password">
+                </div>
+                <div class="container-input">
+                    <input type="submit" value="cadastrar">
+                </div>
+            </form>
+        </div>
+
+        <div class="container-users">
+            <h1 class="users-title">Users</h1>
+            <div class="underline-users-title"></div>
+            <div class="container-cards">
+                <% if (users) { %>
+                    <% users.forEach(user=> { %>
+                        <div class="card-user" >
+                            <div onclick="handleDetail(this.id)" id=<%=user.id %> class="card-info">
+                                <div class="color-block"><i class="fas fa-user fa-5x"></i></div>
+                                <div class="user-info">
+                                    <% if (user.name) { %>
+                                        <h2>
+                                            <%= user.name %>
+                                        </h2>
+                                        <% } else { %>
+                                            <h2>Desconhecido</h2>
+                                            <%}%>
+                                                <p>email <b>
+                                                        <%= user.email %>
+                                                    </b> </p>
+                                                <p>senha <b>
+                                                        <%= user.senha %>
+                                                    </b></p>
+                                </div>
+                            </div>
+                            <span class="button-remove" onclick="handleRemove(this.id)" id=<%=user.id %>>X</span>
+                        </div>
+                        <% }) %>
+                <% } %>
+                
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<script src="/scripts/fetchApi.js"></script>
+
+</html>

@@ -4,6 +4,9 @@ const { checkUserListExist, inputValidation } = require('./middlewares/UserMiddl
 
 const router = express.Router();
 
+router.get('/', UserController.render);
+router.get('/:id', UserController.renderOne);
+
 router.get('/api/v1/users', checkUserListExist, UserController.index);
 router.get('/api/v1/users/:id', checkUserListExist, UserController.getOne);
 

@@ -1,0 +1,208 @@
+body {
+    background: #2c2c2c;
+
+    font-family: Helvetica;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    overflow-y: hidden;
+
+
+    .container-geral {
+        color: white;
+
+        display: flex;
+        justify-content: center;
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        .container-register {
+            margin: 9.188rem 0;
+
+            h1 {
+                font-size: 48px;
+            }
+            .underline-users-title {
+                height: 1rem;
+                width: 7rem;
+
+                background: #ef476f;
+
+                margin-bottom: 2.75rem;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+
+                height: 24.063rem;
+                width: 23.313rem;
+
+                background: #ef476f;
+
+                border-radius: 5px;
+
+                .container-input {
+                    position: relative;
+
+                    padding: 0 3.75rem;
+
+                    height: 2.938rem;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    i {
+                        color: #ef476f;
+                        position: absolute;
+                        left: 30px;
+                    }
+                }
+
+                .container-input:first-of-type {
+                    margin-top: 3.75rem;
+                }
+                .container-input:nth-child(2) {
+                    margin: 2.25rem 0;
+                }
+
+                input {
+                    justify-self: center;
+                    // margin: 0 2rem;
+                    padding: 0 3.75rem;
+
+                    height: 2.938rem;
+
+                    font-size: 18px;
+
+                    border-radius: 5px;
+                    border: none;
+                }
+
+                input[type="submit"] {
+                    background: #06d6a0;
+                    color: white;
+
+                    font-size: 24px;
+                    font-weight: bold;
+
+                    margin-top: 2.5rem;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: 0.2s;
+                        background: #1af0b7;
+                    }
+                    &:active {
+                        transition: 0.2s;
+                        transform: scale(0.98);
+                    }
+                }
+            }
+        }
+
+        .container-users {
+            margin: 9.188rem 19.375rem;
+            margin-right: 0rem;
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .underline-users-title {
+                height: 1rem;
+                width: 7rem;
+
+                background: #ffd166;
+
+                margin-bottom: 2.75rem;
+            }
+
+            .container-cards {
+                background: #ffd166;
+                padding: 1.875rem 0;
+
+                border-radius: 5px;
+
+                height: 32.125rem;
+                width: 25.313rem;
+
+                overflow-y: auto;
+                overflow-x: hidden;
+
+                position: relative;
+
+                .button-remove {
+                    font-size: 35px;
+                    position: absolute;
+                    left: 85%;
+                    transform: translateY(-100%);
+
+                    color: white;
+                    background: #ef476f;
+
+                    padding: 0.25rem 0.75rem;
+                    border-radius: 100%;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: 0.2s;
+
+                        background: #ff86a2;
+                    }
+                }
+
+                .card-info {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+                .card-user:first-of-type {
+                    margin-top: 0;
+                }
+
+                .card-user {
+                    height: 7rem;
+                    background: #ffffff;
+
+                    color: black;
+
+                    display: flex;
+                    align-items: center;
+
+                    margin: 1.875rem 0;
+
+                    &:hover {
+                        transition: 0.2s, background 0.3s;
+                        background: #2c2c2c;
+                        color: white;
+                        transform: scale(1.05);
+                    }
+
+                    .color-block {
+                        width: 7rem;
+                        height: 7rem;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .user-info {
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+.container-detail-user {
+    margin: 12rem 15.313rem;
+    display: flex;
+    flex-direction: column;
+
+    .flexbox-margin {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 72px;
+        color: white;
+
+    }
+
+    .detail-underline-title {
+        height: 1rem;
+        width: 7rem;
+
+        margin-bottom: 0.438rem;
+
+        background: #06d6a0;
+    }
+
+    .detail-card-user {
+        width: 59.125rem;
+        height: 17.563rem;
+
+        display: flex;
+
+        background: white;
+        color: black;
+
+        .color-block-user {
+            height: 17.563rem;
+            width: 17.563rem;
+
+            background: #06d6a0;
+        }
+
+        #user-name {
+            margin-top: 1.938rem;
+
+            width: 41.75rem;
+            height: 4.313rem;
+
+            background: #ef476f;
+            color: white;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            h1 {
+                font-size: 48px;
+                margin: 0;
+
+                margin-left: 2.625rem;
+            }
+            h2 {
+                font-size: 36px;
+
+                margin: 0;
+                margin-left: 4.75rem;
+            }
+
+            i{
+                position: absolute;
+                left: 85%;
+
+                cursor: pointer;
+
+                padding: 1rem;
+                border-radius: 100%;
+
+
+                &:hover{
+                    transition: .2s;
+
+                    background: #3C7AE9;
+                    
+                }
+            }
+        }
+
+        #user-email{
+            margin-top: 1.5rem;
+
+            display: flex;
+            align-items: center;
+            h1{
+                color: black;
+                margin-left: 2.625rem;
+                font-size: 36px;
+            }
+
+            h2{
+                margin-left: 7.313rem;
+
+                font-size: 24px;
+                font-weight: normal;
+            }
+        }
+
+        #user-password{
+            margin-top: 1.5rem;
+
+            display: flex;
+            align-items: center;
+            h1{
+                color: black;
+                margin-left: 2.625rem;
+                font-size: 36px;
+            }
+            h2{
+                margin-left: 6.75rem;
+
+                font-size: 24px;
+                font-weight: normal;
+            }
+        }
+    }
+
+    a{
+        width: 7.313rem;
+        height: 2.938rem;
+
+
+    }
+
+    button{
+        margin: 6.125rem 0 0 0;
+
+        width: 7.313rem;
+        height: 2.938rem;
+
+        font-size: 24px;
+        font-weight: bold;
+
+        color: white;
+        background: #ef476f;
+
+        border-radius: 5px;
+        border:none;
+
+        cursor: pointer;
+
+
+        &:hover{
+            transition: .2s;
+            background: #ff86a2;
+        }
+    }
+}
+

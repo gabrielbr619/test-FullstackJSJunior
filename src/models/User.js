@@ -27,7 +27,6 @@ module.exports = {
       if (userAlreadyExists) {
         return undefined;
       }
-
       fileData.push(user);
       fsWriteData(fileData);
     } else {
@@ -47,12 +46,22 @@ module.exports = {
     return idOwner;
   },
 
-  update(id, email, senha) {
+  update(id, name, email, senha) {
     const fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
-    const userIndex = fileData.findIndex((user) => user.id === id);
-    const userUpdate = { id, email, senha };
-    fileData[userIndex] = userUpdate;
 
+    const userIndex = fileData.findIndex((user) => user.id === id);
+
+    const emailAlreadyUsed = fileData.find((user) => user.email === email && user.id !== id);
+
+    if (emailAlreadyUsed) {
+      return undefined;
+    }
+
+    const userUpdate = {
+      id, name, email, senha,
+    };
+
+    fileData[userIndex] = userUpdate;
     fsWriteData(fileData);
     return userUpdate;
   },
@@ -68,7 +77,9 @@ module.exports = {
 
   deleteOne(id) {
     const fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
-    const newFileData = fileData.filter((user) => user.id === id);
+
+    const newFileData = fileData.filter((user) => user.id !== id);
+    console.log(newFileData);
     fsWriteData(newFileData);
 
     return newFileData;
