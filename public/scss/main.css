@@ -5,7 +5,6 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-y: hidden;
 }
 
 body .container-geral {
@@ -16,6 +15,10 @@ body .container-geral {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
 }
 
 body .container-geral h1,
@@ -23,10 +26,6 @@ body .container-geral h2,
 body .container-geral h3,
 body .container-geral p {
   margin: 0;
-}
-
-body .container-geral .container-register {
-  margin: 9.188rem 0;
 }
 
 body .container-geral .container-register h1 {
@@ -118,7 +117,7 @@ body .container-geral .container-register form input[type="submit"]:active {
 }
 
 body .container-geral .container-users {
-  margin: 9.188rem 19.375rem;
+  margin: 0 15.375rem;
   margin-right: 0rem;
 }
 
@@ -135,9 +134,8 @@ body .container-geral .container-users .underline-users-title {
 
 body .container-geral .container-users .container-cards {
   background: #ffd166;
-  padding: 1.875rem 0;
   border-radius: 5px;
-  height: 32.125rem;
+  height: 24.063rem;
   width: 25.313rem;
   overflow-y: auto;
   overflow-x: hidden;
@@ -171,10 +169,6 @@ body .container-geral .container-users .container-cards .card-info {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-body .container-geral .container-users .container-cards .card-user:first-of-type {
-  margin-top: 0;
 }
 
 body .container-geral .container-users .container-cards .card-user {
@@ -214,14 +208,20 @@ body .container-geral .container-users .container-cards .card-user .color-block 
 }
 
 .container-detail-user {
-  margin: 12rem 15.313rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
 }
 
 .container-detail-user .flexbox-margin {
@@ -367,7 +367,7 @@ body .container-geral .container-users .container-cards .card-user .color-block 
 }
 
 .container-detail-user button {
-  margin: 6.125rem 0 0 0;
+  margin: 2.125rem 0 0 0;
   width: 7.313rem;
   height: 2.938rem;
   font-size: 24px;

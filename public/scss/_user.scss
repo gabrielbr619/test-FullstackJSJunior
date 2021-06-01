@@ -1,7 +1,10 @@
 .container-detail-user {
-    margin: 12rem 15.313rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+
+    height: 100vh;
 
     .flexbox-margin {
         margin: auto;
@@ -141,7 +144,7 @@
     }
 
     button{
-        margin: 6.125rem 0 0 0;
+        margin: 2.125rem 0 0 0;
 
         width: 7.313rem;
         height: 2.938rem;
