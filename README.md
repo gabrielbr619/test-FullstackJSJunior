@@ -1,20 +1,27 @@
 # **Projeto FullstackJS Junior**
 
-![image](https://user-images.githubusercontent.com/79314576/120045271-fc862d80-bfe5-11eb-9377-0eac68b0cffb.png)
+![gifContele](https://user-images.githubusercontent.com/79314576/120321044-38a4e100-c2b9-11eb-8326-46e8df5dbf9f.gif)
 
 ## *O que é*
 
-Trata-se de uma API RESTFUL que permite a elaboração de um CRUD básico, decidi utilizar a menor quantidade de libs pela simplicidade do projeto, então tornei o documento JSON, cuja criação era obrigatória, o banco de dados da aplicação. 
+Trata-se de um projeto Fullstack que permite a elaboração de um CRUD básico, decidi utilizar o padrão MVC pela simplicidade do projeto e o foco no backend, sendo assim optei pelo o EJS como View, por creer que este lidaria bem com as necessidades do app, o backend é uma API Restful que utiliza express, o banco de dados é o documento JSON, cuja criação era obrigatória. 
 
 <br/>
 
 ## *Como rodar*
 
+Você pode acessar a versão do app que está hospedado no ***[Heroku](https://contele-challenge-fullstack.herokuapp.com/)*** ou rodar localmente.
+
+Caso queira rodar local, siga os passos
+
 * Clone esse repositório
 * **Npm Install** - Instalar dependências do app
 * **Npm Start** - Rodar o app
+* Acesse a URL ***"http://localhost:3333/"***
 
-Então utilize a ferramenta para testes de API da sua preferência.
+Caso queira utilizar uma ferramenta para testes de API de sua preferência. Basta inserir a URL da versão do app que irá usar e então completar com o endpoint desejado, por exemplo "https://contele-challenge-fullstack.herokuapp.com/api/v1/users" <br/> 
+<br/> 
+Para mais informações, leia abaixo.
 
 <br/>
 
@@ -26,7 +33,98 @@ HTTP | ROUTE | BODY | DESCRIÇÃO |
 | --- | ------ | ------ |  ------ |
 | GET | /api/v1/users |  | Listar todos usuarios
 | GET | /api/v1/users/user_id | | Listar único usuário
-| POST | /api/v1/users | JSON (email,senha) | Criar único usuário
-| PUT | /api/v1/users/user_id | JSON (email,senha) | Alterar único usuário
+| POST | /api/v1/users | JSON (name,email,senha) | Criar único usuário
+| PUT | /api/v1/users/user_id | JSON (name,email,senha) | Alterar único usuário
 | DELETE | /api/v1/users | | Deletar todos usuarios
 | DELETE | /api/v1/users/user_id | | Deletar único usuário
+
+<br/>**Mostrar usuários**
+----
+  Lista todos usuários.
+
+* **URL**
+
+  /api/v1/users
+
+* **Method:**
+
+  `GET`
+  
+<br/>**Mostrar um usuário**
+----
+  Lista único usuário.
+
+* **URL**
+
+  /api/v1/users/user_id
+
+* **Method:**
+
+  `GET`
+
+<br/>**Criar usuário**
+----
+  Criar único usuário.
+
+* **URL**
+
+  /api/v1/users
+
+* **Method:**
+
+  `POST`
+*  **BODY**
+
+   **Required:**
+ 
+   `JSON(email,senha)`
+   
+   **Optional**
+   
+   `JSON(name,email,senha)`
+   
+ 
+<br/>**Alterar usuário**
+----
+  Alterar único usuário.
+
+* **URL**
+
+  /api/v1/users/user_id
+
+* **Method:**
+
+  `PUT`
+*  **BODY**
+
+   **Required:**
+ 
+   `JSON(email,senha)`
+   
+   **Optional**
+   
+   `JSON(name,email,senha)`
+  
+<br/>**Deletar usuários**
+----
+  Deletar todos usuários.
+
+* **URL**
+
+  /api/v1/users
+
+* **Method:**
+
+  `DELETE`
+  
+<br/>**Deletar um usuário**
+----
+  Deleta único usuário.
+
+* **URL**
+
+  /api/v1/users/user_id
+
+* **Method:**
+
+  `DELETE`
