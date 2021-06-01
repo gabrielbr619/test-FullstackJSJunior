@@ -20,7 +20,7 @@ Caso queira rodar local, siga os passos
 * **Npm Start** - Rodar o app
 * Acesse a URL ***"http://localhost:3333/"***
 
-Caso queira utilizar uma ferramenta para testes de API de sua preferência. Basta inserir a URL da versão do app que irá usar e então completar com o endpoint desejado, por exemplo "https://contele-challenge-fullstack.herokuapp.com/api/v1/users" <br/> 
+Se quiser utilizar uma ferramenta para testes de API de sua preferência. Basta inserir a URL da versão do app que irá usar e então completar com o endpoint desejado, por exemplo "https://contele-challenge-fullstack.herokuapp.com/api/v1/users" <br/> 
 <br/> 
 Para mais informações, leia abaixo.
 
