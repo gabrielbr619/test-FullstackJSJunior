@@ -31,7 +31,6 @@ module.exports = {
 
   create(req, res) {
     const { email, senha, name } = req.body;
-    console.log(req.body);
     const id = uuid();
     const user = {
       id,
@@ -71,7 +70,6 @@ module.exports = {
   },
 
   deleteOne(req, res) {
-    console.log(req.params.id);
     const users = User.deleteOne(req.params.id);
     res.status(200).send(users);
   },
