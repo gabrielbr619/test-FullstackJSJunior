@@ -15,4 +15,4 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
-app.listen(3000, () => console.log(`Servidor online port ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor online port ${PORT}`));

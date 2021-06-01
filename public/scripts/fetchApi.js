@@ -3,6 +3,7 @@
 /* eslint-disable no-undef */
 
 const form = document.querySelector('form');
+const URL = 'http://localhost:3333';
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -22,7 +23,7 @@ function handleSubmit(e) {
     senha,
   };
 
-  fetch('http://localhost:3000/api/v1/users', {
+  fetch(`${URL}/api/v1/users`, {
     method: 'post',
     body: JSON.stringify(user),
     headers:
@@ -32,7 +33,7 @@ function handleSubmit(e) {
     if (data.status === 400) {
       alert('Email já existente!');
     } else {
-      window.location.href = 'http://localhost:3000/';
+      window.location.href = URL;
     }
   })
     .catch((error) => {
@@ -42,14 +43,14 @@ function handleSubmit(e) {
 }
 
 function handleDetail(id) {
-  window.location.href = `http://localhost:3000/${id}`;
+  window.location.href = `${URL}/${id}`;
 }
 
 function handleRemove(id) {
-  fetch(`http://localhost:3000/api/v1/users/${id}`, {
+  fetch(`${URL}/api/v1/users/${id}`, {
     method: 'delete',
   });
-  window.location.href = 'http://localhost:3000/';
+  window.location.href = URL;
 }
 
 function handleUpdate(id) {
@@ -68,7 +69,7 @@ function handleUpdate(id) {
     senha,
   };
 
-  fetch(`http://localhost:3000/api/v1/users/${id}`, {
+  fetch(`${URL}/api/v1/users/${id}`, {
     method: 'put',
     body: JSON.stringify(user),
     headers:
@@ -78,7 +79,7 @@ function handleUpdate(id) {
     if (data.status === 400) {
       alert('Email já existente!');
     } else {
-      window.location.href = `http://localhost:3000/${id}`;
+      window.location.href = `${URL}/${id}`;
     }
   })
     .catch((error) => {
