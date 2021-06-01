@@ -79,7 +79,6 @@ module.exports = {
     const fileData = JSON.parse(fs.readFileSync('./UsersList.json'));
 
     const newFileData = fileData.filter((user) => user.id !== id);
-    console.log(newFileData);
     fsWriteData(newFileData);
 
     return newFileData;
